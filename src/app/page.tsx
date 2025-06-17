@@ -23,9 +23,28 @@ export default function HomePage() {
     specialRequests: "",
   });
 
-  const updateGuestInfo = (updates: Partial<OrderState['guestInfo']>) => {
-    setOrderState(prev => ({ ...prev, guestInfo: { ...prev.guestInfo, ...updates }}));
-  };
+const updateGuestInfo = (updates: Partial<OrderState['guestInfo']>) => {
+  const newPeople = updates.people;
+  const oldPeople = orderState.guestInfo.people;
+
+  setOrderState(prev => {
+    const newState: OrderState = {
+      ...prev,
+      guestInfo: { ...prev.guestInfo, ...updates }
+    };
+
+    // Se o número de pessoas mudou, recria o array de 'persons'
+    if (newPeople !== undefined && newPeople !== oldPeople) {
+      newState.persons = Array.from({ length: newPeople }, (_, i) => ({
+        id: i + 1,
+        hotDish: null,
+        notes: "",
+      }));
+    }
+
+    return newState;
+  });
+};
   
   if (loading) return <LoadingScreen />;
 

@@ -25,22 +25,10 @@ export function StepDetails({
 }: StepDetailsProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handlePeopleChange = (people: number) => {
-    const persons = Array.from({ length: people }, (_, i) => ({
-      id: i + 1,
-      hotDish: null,
-      notes: "",
-    }));
-
-    // Dispara a atualização para o componente pai
-    onUpdateOrderState({
-      ...orderState.guestInfo,
-      people,
-      // É crucial resetar os pratos quentes aqui também
-    });
-    // Atualiza o estado local das pessoas
-    setOrderState(prev => ({ ...prev, persons }));
-  };
+const handlePeopleChange = (people: number) => {
+  // Apenas chama a função do componente pai para atualizar o número de pessoas
+  onUpdateOrderState({ people });
+};
 
   const validateAndNext = () => {
     const newErrors: Record<string, string> = {};

@@ -68,9 +68,9 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+* {
+  border-color: hsl(var(--border));
+}
   body {
     @apply bg-muted text-secondary; /* Fundo Bege, Texto Verde Escuro */
     font-family: "Inter", sans-serif;
