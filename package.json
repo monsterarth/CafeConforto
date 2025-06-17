@@ -1,12 +1,12 @@
 {
-  "name": "cafe-conforto",
+  "name": "cafe-conforto-monorepo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "cd cafe-conforto && npm run dev",
+    "build": "cd cafe-conforto && npm install && npm run build",
+    "start": "cd cafe-conforto && npm run start",
+    "lint": "cd cafe-conforto && npm run lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
