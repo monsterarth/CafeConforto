@@ -11,7 +11,9 @@ import { StepSuccess } from "@/components/step-success";
 import type { OrderState } from "@/types";
 import { Button } from "@/components/ui/button";
 
+
 export default function HomePage() {
+    console.log("ID do Projeto Firebase:", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
   const { appConfig, cabins, deliveryTimes, hotDishes, accompaniments, loading, error, refetch } = useCafeData();
   
   const [currentStep, setCurrentStep] = useState(1);
