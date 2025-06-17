@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 76 26% 50%; /* Verde-médio #97A25F */
+    --primary-foreground: 60 9% 98%;
+ 
+    --secondary: 76 11% 26%; /* Verde-escuro #4B4F36 */
+    --secondary-foreground: 60 9% 98%;
+ 
+    --muted: 33 21% 90%; /* Bege #E9D9CD */
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 33 21% 90%; /* Bege #E9D9CD */
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 33 11% 63%; /* Cinza-taupe #ADA192 */
+    --input: 33 11% 63%;
+    --ring: 76 26% 50%;
+ 
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    /* Mantenha as mesmas cores para o modo dark, pois o design é claro */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 76 26% 50%;
+    --primary-foreground: 60 9% 98%;
+ 
+    --secondary: 76 11% 26%;
+    --secondary-foreground: 60 9% 98%;
+ 
+    --muted: 33 21% 90%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 33 21% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 33 11% 63%;
+    --input: 33 11% 63%;
+    --ring: 76 26% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-muted text-secondary; /* Fundo Bege, Texto Verde Escuro */
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

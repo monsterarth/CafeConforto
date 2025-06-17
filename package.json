@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
+    "firebase": "^11.9.1",
+    "lucide-react": "^0.516.0",
+    "react-hook-form": "^7.58.1",
+    "zod": "^3.25.67"
+  }
+}
