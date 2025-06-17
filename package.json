@@ -34,6 +34,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -44,5 +45,16 @@
    "postcss": "^8",
    "tailwindcss": "^4",
    "typescript": "^5"
+=======
+  "@types/node": "^20",
+  "@types/react": "^19",
+  "@types/react-dom": "^19",
+  "autoprefixer": "^10.4.19",
+  "eslint": "^9",
+  "eslint-config-next": "15.3.3",
+  "postcss": "^8",
+  "tailwindcss": "^4",
+  "typescript": "^5"
+>>>>>>> 69199cc81d54456cfba12cc93f6e5e86b8e03b06
 }
 }
